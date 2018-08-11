@@ -16,4 +16,5 @@ urlpatterns = [
     url(r'^db', hello.views.db, name='db'),
     path('admin/', admin.site.urls),
     url('cadastrar/', consultoras.views.cadastrar, name='cadastrarconsultora' ),
+    url('lista-consultoras/', consultoras.views.lista_consultoras, name='listaconsultoras' ),
 ]
