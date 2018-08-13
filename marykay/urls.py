@@ -12,6 +12,6 @@ import principal.views
 
 urlpatterns = [
     url(r'^$', principal.views.index, name='index'),
-    url('login/', principal.views.login, name='login'),
     path('admin/', admin.site.urls),
+    path('accounts/', include('django.contrib.auth.urls')),
 ]
