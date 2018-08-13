@@ -14,4 +14,5 @@ urlpatterns = [
     url(r'^$', principal.views.index, name='index'),
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
+    path('logout/', principal.views.logout_view, name="logout_view")
 ]
