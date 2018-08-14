@@ -219,7 +219,7 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle mr-lg-0 user-img a-topbar__nav a-nav" id="userDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
-        <b class="f-size-17">Taina</b>
+        <b class="f-size-17">{{request.user.first_name}}</b>
       </a>
       
       <ul class="dropdown-menu dropdown-user animated flipInX" aria-labelledby="userDropdown">
@@ -228,7 +228,7 @@
             <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
           </div>
           <div class="header-user-det">
-            <span class="a-dropdown__header-title">Taina Dilver</span>
+            <span class="a-dropdown__header-title">{{request.user.first_name}} {{request.user.last_name}}</span>
             <span class="a-dropdown__header-subtitle">UI / UX Expert</span>
           </div>
         </li>
