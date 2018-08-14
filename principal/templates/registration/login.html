@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="description" content="">
 	<meta name="author" content="">
-	<title>Glovia - Responsive Bootstrap 4 Admin, Dashboard & Project Management Template</title>
+	<title>Sistema Gerenciador de consultoras</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -56,68 +56,63 @@
 
 				<div class="login-container animated fadeInRightBig">
 
-					<h2 class="text-center text-upper">SignUp To Glovia Dashboard</h2>
+					<h2 class="text-center text-upper">Já sou consultora</h2>
 					<form class="form-horizontal" method="post" action="{% url 'login' %}">
 						{% csrf_token %}
 						<div class="form-group">
-							<input type="text" class="form-control" id="inputEmail3" placeholder="Full Name"
-							 name="username">
+							<input type="text" class="form-control" id="inputEmail3" placeholder="Usuário" name="username">
 							<i class="fa fa-user"></i>
 						</div>
 
+						<div class="form-group help">
+							<input type="password" class="form-control" placeholder="Senha" name="password">
+							<i class="fa fa-lock"></i>
+						</div>
+
+						<!-- Esqueceu a senha  -->
 						<!-- <div class="form-group">
-							<input type="email" class="form-control" placeholder="Email or Username">
-							<i class="fa fa-user"></i>
-						</div> -->
-
-						<div class="form-group help">
-							<input type="password" class="form-control" placeholder="Password" name="password">
-							<i class="fa fa-lock"></i>
-							<a href="#" class="pass-view fa fa-eye"></a>
-						</div>
-
-						<div class="form-group help">
-							<input type="password" class="form-control" placeholder="Confirm Password">
-							<i class="fa fa-lock"></i>
-						</div>
-
-						<div class="form-group">
 							<div class="flexbox align-items-center">
 								<span class="custom-checkbox">
 									<input type="checkbox" id="checkbox1" name="options[]" value="1">
 									<label for="checkbox1">Remember me</label>
 								</span>
 							</div>
-						</div>
+						</div> -->
 
 						<div class="form-group">
 							<div class="flexbox align-items-center">
-								<input type="submit" value="login" class="btn gredient-bg">log in</button>
-								<p>Already Have An Account
-									<a href="login.html" data-toggle="tooltip" class="gredient-cl" data-original-title="Login">Log In Here.</a>
-								</p>
+								<input type="submit" value="Entrar" class="btn gredient-bg">
 							</div>
 						</div>
+
+						{% if form.errors %}
+							<div class="alert alert-danger alert-dismissable">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+								Seu usuário ou senha não estão corretos. Tente novamente.
+							</div>
+						{% endif %} 
+						{% if next %}
+							{% if user.is_authenticated %}
+							<div class="alert alert-danger alert-dismissable">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+								O usuário não tem acesso a esta página.
+							</div>
+							{% else %}
+							<div class="alert alert-danger alert-dismissable">
+								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+								Para ter aceso a tela o usuário deve estar logado.
+							</div>
+							{% endif %} 
+						{% endif %}
+						
 						<input type="hidden" name="next" value="{{ next }}">
 					</form>
 				</div>
 				<!-- .login-container -->
-
 			</div>
 			<!-- .login-sidebar -->
 		</div>
 		<!-- .row -->
-
-		{% if form.errors %}
-			<p>Your username and password didn't match. Please try again.</p>
-		{% endif %} 
-		{% if next %}
-			{% if user.is_authenticated %}
-			<p>Your account doesn't have access to this page. To proceed, please login with an account that has access.</p>
-			{% else %}
-			<p>Please login to see this page.</p>
-			{% endif %} 
-		{% endif %}
 	</div>
 
 
