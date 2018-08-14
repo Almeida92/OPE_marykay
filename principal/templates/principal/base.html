@@ -26,6 +26,9 @@
 		<!-- Page level plugin CSS -->
 		<link href="/static/css/animate.css" rel="stylesheet">
 
+		<!-- Sweet Alert CSS -->
+		<link rel="stylesheet" href="/static/assets/plugins/sweetalert/css/sweetalert.css">
+
 		<!-- Custom styles for this template -->
 		<link href="/static/css/glovia.css" rel="stylesheet">
 		<link href="/static/css/glovia-responsive.css" rel="stylesheet">
@@ -107,11 +110,31 @@
 			
 			<!-- Custom scripts for all pages -->
 			<script src="/static/js/glovia.js"></script>
+
+			<!-- Sweet Alert JavaScript -->
+			<script src="/static/assets/plugins/sweetalert/js/sweetalert.js"></script>
 			
 			<script>
-			  $('.dropdown-toggle').dropdown()
+				$('.dropdown-toggle').dropdown()
+				
+				var logout_btn = $('#logout');
+
+				logout_btn.click(() => {
+					swal({
+						title: "Deseja realmente sair do sistema ?",
+						text: "",
+						type: "warning",
+						showCancelButton: true,
+						confirmButtonClass: 'btn-danger',
+						confirmButtonText: 'Sim',
+						cancelButtonText: 'não',
+						closeOnConfirm: false,
+					},
+					function(){
+						window.location.replace("/logout");
+					});
+				})
 			</script>
-			
 	  </div>
 	  <!-- Wrapper -->
 	  
