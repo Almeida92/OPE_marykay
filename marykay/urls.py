@@ -6,10 +6,6 @@ admin.autodiscover()
 
 import principal.views
 
-# Examples:
-# url(r'^$', 'gettingstarted.views.home', name='home'),
-# url(r'^blog/', include('blog.urls')),
-
 urlpatterns = [
     url(r'^$', principal.views.index, name='index'),
     path('admin/', admin.site.urls),
