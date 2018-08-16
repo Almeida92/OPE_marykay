@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<meta name="description" content="">
 		<meta name="author" content="">
-		<title>Glovia - Responsive Bootstrap 4 Admin, Dashboard & Project Management Template</title>
+		<title>Sistema Gerenciador de consultoras</title>
 
 		<!-- Bootstrap core CSS -->
 		<link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -113,28 +113,9 @@
 
 			<!-- Sweet Alert JavaScript -->
 			<script src="/static/assets/plugins/sweetalert/js/sweetalert.js"></script>
-			
-			<script>
-				$('.dropdown-toggle').dropdown()
-				
-				var logout_btn = $('#logout');
-
-				logout_btn.click(() => {
-					swal({
-						title: "Deseja realmente sair do sistema ?",
-						text: "",
-						type: "warning",
-						showCancelButton: true,
-						confirmButtonClass: 'btn-danger',
-						confirmButtonText: 'Sim',
-						cancelButtonText: 'não',
-						closeOnConfirm: false,
-					},
-					function(){
-						window.location.replace("/logout");
-					});
-				})
-			</script>
+			<script src="/static/js/custom/logout.js"></script>
+			{% block scripts_block %}
+			{% endblock %}
 	  </div>
 	  <!-- Wrapper -->
 	  
