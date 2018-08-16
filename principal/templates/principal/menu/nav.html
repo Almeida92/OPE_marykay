@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg bb-1 navbar-light theme-bg br-theme fixed-top" id="mainNav">
+			
+  <!-- Start Header -->
+  <header class="header-logo theme-bg bb-1 br-1 br-light">
+    <a class="nav-link cl-white text-center mr-lg-3 hidden-xs" id="sidenavToggler"><i class="ti-align-left"></i></a>
+    <a class="cl-white navbar-brand" href="index.html">Mary Kay</a>
+  </header>
+  <!-- End Header -->
+  
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="ti-align-left"></span>
+  </button>
+  
+  <div class="collapse navbar-collapse" id="navbarResponsive">
+     
+    <!-- =============== Start Side Menu ============== -->
+    {% include 'principal/menu/menu_lateral.html' %}
+   <!-- =============== End Side Menu ============== -->
+    
+    <!-- =============== Search Bar ============== -->
+    <ul class="navbar-nav ml-left">
+    <li class="nav-item">
+      <form class="form-inline my-2 my-lg-0 mr-lg-2">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-primary" type="button">
+            <i class="ti-search"></i>
+          </button>
+        </span>
+        <input class="form-control" type="text" placeholder="Buscar">
+      </div>
+      </form>
+    </li>
+    </ul>
+    <!-- =============== End Search Bar ============== -->
+    
+    <!-- =============== Header Rightside Menu ============== -->
+    <ul class="navbar-nav ml-auto">
+    
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle mr-lg-0 user-img a-topbar__nav a-nav" id="userDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
+        <b class="f-size-17">{{request.user.first_name}}</b>
+      </a>
+      
+      <ul class="dropdown-menu dropdown-user animated flipInX" aria-labelledby="userDropdown">
+        <li class="dropdown-header green-bg">
+          <div class="header-user-pic">
+            <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
+          </div>
+          <div class="header-user-det">
+            <span class="a-dropdown__header-title">{{request.user.first_name}} {{request.user.last_name}}</span>
+            <span class="a-dropdown__header-subtitle">Consultor(a) Sênior</span>
+          </div>
+        </li>
+        <li><a class="dropdown-item" href="#"><i class="ti-user"></i> Perfil</a></li>
+        <li><a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a></li>
+        <!-- <li><a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a></li> -->
+        <li><a id="logout" class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a></li>
+      </ul>
+    </li>
+    </ul>
+    <!-- =============== End Header Rightside Menu ============== -->
+  </div>
+</nav>
