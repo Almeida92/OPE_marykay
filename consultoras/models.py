@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 
 class Consultora(models.Model):
-  usuario = models.ForeignKey(User, on_delete=models.CASCADE)
+  usuario = models.ForeignKey(User, on_delete=models.CASCADE, related_name="usuario")
   nivel = models.CharField(max_length=200)
   sexo = models.CharField(max_length=1)
   status = models.CharField(max_length=200)

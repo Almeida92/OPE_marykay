@@ -1,5 +1,4 @@
-{% extends "principal/base.html" %}
-{% block block_content %}
+{% extends "principal/base.html" %} {% block block_content %}
 
 <div class="row">
     <div class="col-md-12">
@@ -7,24 +6,27 @@
             <div class="card-header">
                 <h4>Lista de Consultoras</h4>
             </div>
+
             <div class="card-body">
-                <div class="table-responsive"> 
+                <div class="table-responsive">
                     <table class="table table-bordered">
                         <thead>
                             <tr>
                                 <th>Código</th>
                                 <th>Nome</th>
                                 <th>Email</th>
-                                <th>Celular</th>
+                                <th>Status</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>John</td>
-                                <td>johncarter@mail.com</td>
-                                <td>+91 235 658 7458</td>
-                            </tr>
+                            {% for consultora in lista_consultoras %}
+                                <tr>
+                                    <td>{{ consultora.id }} </td>
+                                    <td>{{ consultora.usuario.first_name }}</td>
+                                    <td>{{ consultora.usuario.mail }}</td>
+                                    <td>{{ consultora.status }} </td>
+                                </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
                 </div>
