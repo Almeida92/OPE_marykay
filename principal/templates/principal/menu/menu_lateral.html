@@ -1,82 +1,22 @@
 <div class="navbar-side">
   <ul class="navbar-nav navbar-sidenav bg-light-dark" id="exampleAccordion">
 
-    <!-- Start Dashboard-->
+    <!-- Start Consultoras-->
     <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
       <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Dashboard" data-parent="#exampleAccordion">
-        <i class="ti i-cl-1 ti-dashboard"></i>
-        <span class="nav-link-text">Dashboard</span>
+        <i class="ti i-cl-1 ti-user"></i>
+        <span class="nav-link-text">Consultoras</span>
       </a>
       <ul class="sidenav-second-level collapse" id="Dashboard">
         <li>
-          <a href="#">Dashboard</a>
+          <a href="{% url 'cadastrar_consultora' %}">Cadastrar</a>
         </li>
         <li>
-          <a href="#">Consultoras</a>
-        </li>
-        <li>
-          <a href="#">Produtos</a>
-        </li>
-        <li>
-          <a href="#">Financeiro</a>
+          <a href="{% url 'lsita_consultora' %}">Consultar</a>
         </li>
       </ul>
     </li>
-    <!-- End Dashboard -->
+    <!-- End Consultoras -->
 
-    <!-- Start Ecommerce -->
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Ecommerce">
-      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#ecommerce" data-parent="#exampleAccordion">
-        <i class="ti i-cl-7 ti-shopping-cart"></i>
-        <span class="nav-link-text">Produtos </span>
-      </a>
-      <ul class="sidenav-second-level collapse" id="ecommerce">
-
-        <li>
-          <a href="#">Adicionar produto</a>
-        </li>
-
-        <li>
-          <a href="#">Pedir Produto</a>
-        </li>
-
-        <li>
-          <a href="#">Detalhar produtos</a>
-        </li>
-<!-- 
-        <li>
-          <a href="add-to-cart.html">Add To Cart</a>
-        </li> -->
-
-      </ul>
-    </li>
-    <!-- End Ecommerce -->
-
-    <!-- Start Report -->
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Report">
-      <a class="nav-link" href="#">
-        <i class="ti i-cl-11 ti-bar-chart"></i>
-        <span class="nav-link-text">Status</span>
-      </a>
-    </li>
-    <!-- End Report -->
-
-    <!-- Start Settings -->
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Settings">
-      <a class="nav-link" href="#">
-        <i class="ti i-cl-12 ti-settings"></i>
-        <span class="nav-link-text">Settings</span>
-      </a>
-    </li>
-    <!-- End Settings -->
-
-    <!-- Start Help & Support -->
-    <li class="nav-item" data-toggle="tooltip" data-placement="right" title="Help-Support">
-      <a class="nav-link" href="#">
-        <i class="ti i-cl-1 ti-user"></i>
-        <span class="nav-link-text">Help & Support</span>
-      </a>
-    </li>
-    <!-- End Help & Support -->
   </ul>
 </div>
