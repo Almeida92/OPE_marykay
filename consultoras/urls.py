@@ -5,5 +5,5 @@ import consultoras.views
 
 urlpatterns = [
     url('cadastrar/', consultoras.views.cadastrar, name='cadastrar_consultora' ),
-    url('listar/', consultoras.views.lista_consultoras, name='lsita_consultora' ),
+    url('listar/', consultoras.views.lista_consultoras, name='lista_consultora' ),
 ]
