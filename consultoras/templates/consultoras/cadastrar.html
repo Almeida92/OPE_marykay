@@ -30,8 +30,64 @@
           </div>
 
           <div class="row">
+            <div class="form-group col-md-4">
+              {{ form.endereco.errors }}
+              <label for="{{ form.endereco.id_for_label }}">{{ form.endereco.label }}</label>
+              {{ form.endereco }}
+            </div>
 
+            <div class="form-group col-md-4">
+              {{ form.bairro.errors }}
+              <label for="{{ form.bairro.id_for_label }}">{{ form.bairro.label }}</label>
+              {{ form.bairro }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.cidade.errors }}
+              <label for="{{ form.cidade.id_for_label }}">{{ form.cidade.label }}</label>
+              {{ form.cidade }}
+            </div>
           </div>
+
+          <div class="row">
+            <div class="form-group col-md-4">
+              {{ form.dt_nascimento.errors }}
+              <label for="{{ form.dt_nascimento.id_for_label }}">{{ form.dt_nascimento.label }}</label>
+              {{ form.dt_nascimento }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.telefone.errors }}
+              <label for="{{ form.telefone.id_for_label }}">{{ form.telefone.label }}</label>
+              {{ form.telefone }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.celular.errors }}
+              <label for="{{ form.celular.id_for_label }}">{{ form.celular.label }}</label>
+              {{ form.celular }}
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="form-group col-md-4">
+                {{ form.status.errors }}
+                <label for="{{ form.status.id_for_label }}">{{ form.status.label }}</label>
+                {{ form.status }}
+              </div>
+  
+              <div class="form-group col-md-4">
+                {{ form.nivel.errors }}
+                <label for="{{ form.nivel.id_for_label }}">{{ form.nivel.label }}</label>
+                {{ form.nivel }}
+              </div>
+  
+              <div class="form-group col-md-4">
+                {{ form.desconto.errors }}
+                <label for="{{ form.desconto.id_for_label }}">{{ form.desconto.label }}</label>
+                {{ form.desconto }}
+              </div>
+            </div>
 
           <button type="submit" class="btn btn-primary">Enviar</button>
         </form>
@@ -39,7 +95,6 @@
     </div>
   </div>
   <!-- /.col-md-12 -->
-
 </div>
 
 
