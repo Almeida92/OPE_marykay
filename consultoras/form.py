@@ -10,6 +10,10 @@ class ConsultoraForm(forms.Form):
         label='Último Nome',
         max_length=100,
         widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    cpf = forms.CharField(
+        label='CPF',
+        max_length=100,
+        widget=forms.TextInput(attrs={'class' : 'form-control'}))
     sexo = forms.ChoiceField(choices=[('f','(F)'), ('m','(M)')], widget=forms.RadioSelect())
     endereco = forms.CharField(
         label='Endereço',
