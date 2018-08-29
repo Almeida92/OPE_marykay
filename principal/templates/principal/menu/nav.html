@@ -3,7 +3,7 @@
   <!-- Start Header -->
   <header class="header-logo theme-bg bb-1 br-1 br-light">
     <a class="nav-link cl-white text-center mr-lg-3 hidden-xs" id="sidenavToggler"><i class="ti-align-left"></i></a>
-    <a class="cl-white navbar-brand" href="index.html">Mary Kay</a>
+    <a class="cl-white navbar-brand" href="{% url 'index' %}">Mary Kay</a>
   </header>
   <!-- End Header -->
   
@@ -37,189 +37,10 @@
     <!-- =============== Header Rightside Menu ============== -->
     <ul class="navbar-nav ml-auto">
     
-    <!-- Messages -->
-    <li class="nav-item dropdown">
-       <a class="nav-link dropdown-toggle mr-lg-3 a-topbar__nav a-nav" id="messagesDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="cl-white ti-email"></i>
-        <span class="a-nav__link-badge a-badge bg-white theme-cl">3</span>
-        <span class="hidden-lg hidden-md mrg-l-10">New Notification</span>
-       </a>
-       <div class="dropdown-menu animated flipInX" aria-labelledby="messagesDropdown">
-        <div class="dropdown-header text-center pink-bg">
-          <span class="a-dropdown__header-title">3 New</span>
-          <span class="a-dropdown__header-subtitle">User Messages</span>
-        </div>
-        <div class="ground-list ground-list-hove" id="message-box">
-          <div class="ground ground-single-list">
-            <a href="#">
-              <img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
-              <span class="profile-status bg-online pull-right"></span>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Co-Founder</small>
-            </div>
-
-            <div class="ground-right">
-              <span class="small">Online</span>
-            </div>
-          </div>
-          
-          <div class="ground ground-single-list">
-            <a href="#">
-              <img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
-              <span class="profile-status bg-offline pull-right"></span>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Co-Founder</small>
-            </div>
-
-            <div class="ground-right">
-              <span class="small">10 Min Ago</span>
-            </div>
-          </div>
-          
-          <div class="ground ground-single-list">
-            <a href="#">
-              <img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
-              <span class="profile-status bg-working pull-right"></span>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Co-Founder</small>
-            </div>
-
-            <div class="ground-right">
-              <span class="small">20 Min Ago</span>
-            </div>
-          </div>
-          
-          <div class="ground ground-single-list">
-            <a href="#">
-              <img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
-              <span class="profile-status bg-busy pull-right"></span>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Co-Founder</small>
-            </div>
-
-            <div class="ground-right">
-              <span class="small">18 Min Ago</span>
-            </div>
-          </div>
-          
-          <div class="ground ground-single-list">
-            <a href="#">
-              <img class="ground-avatar" src="http://via.placeholder.com/180x180" alt="...">
-              <span class="profile-status bg-online pull-right"></span>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Co-Founder</small>
-            </div>
-
-            <div class="ground-right">
-              <span class="small">Online</span>
-            </div>
-          </div>
-        </div>
-         <a class="dropdown-item view-all" href="#">View all Messages</a>
-      </div>
-    </li>
-    <!-- End Messages -->
-    
-    <!-- Notification -->
-    <li class="nav-item dropdown">
-    
-      <a class="nav-link dropdown-toggle mr-lg-3 a-topbar__nav a-nav" id="alertsDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="cl-white ti-bell"></i>
-        <span class="a-nav__link-badge a-badge bg-white theme-cl a-animate-blink">6</span>
-        <span class="hidden-lg hidden-md mrg-l-10">New Notification</span>
-      </a>
-        
-      <div class="dropdown-menu animated flipInX" aria-labelledby="alertsDropdown">
-        <div class="dropdown-header text-center accent-bg">
-          <span class="a-dropdown__header-title">6 New</span>
-          <span class="a-dropdown__header-subtitle">User Notifications</span>
-        </div>
-        
-        <div class="ground-list ground-list-hove" id="notification-box">
-          <div class="ground ground-single-list">
-            <a href="#">
-              <div class="btn-circle-40 btn-success"><i class="ti-calendar"></i></div>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Check New Admin Dashboard..</small>
-              <span class="small">Just Now</span>
-            </div>
-          </div>
-            
-          <div class="ground ground-single-list">
-            <a href="#">
-              <div class="btn-circle-40 btn-danger"><i class="ti-calendar"></i></div>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">You can Customize..</small>
-              <span class="small">02 Min Ago</span>
-            </div>
-          </div>
-            
-          <div class="ground ground-single-list">
-            <a href="#">
-              <div class="btn-circle-40 btn-info"><i class="ti-calendar"></i></div>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Need Responsive Business Tem...</small>
-              <span class="small">10 Min Ago</span>
-            </div>
-          </div>
-            
-          <div class="ground ground-single-list">
-            <a href="#">
-              <div class="btn-circle-40 btn-warning"><i class="ti-calendar"></i></div>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">Next Meeting on Tuesday..</small>
-              <span class="small">15 Min Ago</span>
-            </div>
-          </div>
-            
-          <div class="ground ground-single-list">
-            <a href="#">
-              <div class="btn-circle-40 btn-purple"><i class="ti-calendar"></i></div>
-            </a>
-
-            <div class="ground-content">
-              <h6><a href="#">Maryam Amiri</a></h6>
-              <small class="text-fade">You can Change Your Pass..</small>
-              <span class="small">18 Min Ago</span>
-            </div>
-          </div>
-        </div>
-        <a class="dropdown-item view-all" href="#">View all Notifications</a>
-      </div>
-    </li>
-    <!-- End Notification -->
-    
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle mr-lg-0 user-img a-topbar__nav a-nav" id="userDropdown" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
-        <b class="f-size-17">Taina</b>
+        <b class="f-size-17">{{request.user.first_name}}</b>
       </a>
       
       <ul class="dropdown-menu dropdown-user animated flipInX" aria-labelledby="userDropdown">
@@ -228,14 +49,13 @@
             <img src="http://via.placeholder.com/180x180" alt="user-img" width="36" class="img-circle">
           </div>
           <div class="header-user-det">
-            <span class="a-dropdown__header-title">Taina Dilver</span>
-            <span class="a-dropdown__header-subtitle">UI / UX Expert</span>
+            <span class="a-dropdown__header-title">{{request.user.first_name}} {{request.user.last_name}}</span>
+            <span class="a-dropdown__header-subtitle">Consultor(a) Sênior</span>
           </div>
         </li>
-        <li><a class="dropdown-item" href="#"><i class="ti-user"></i> My Profile</a></li>
-        <li><a class="dropdown-item" href="#"><i class="ti-wallet"></i> My Balance</a></li>
+        <li><a class="dropdown-item" href="#"><i class="ti-user"></i> Perfil</a></li>
         <li><a class="dropdown-item" href="#"><i class="ti-email"></i> Inbox</a></li>
-        <li><a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a></li>
+        <!-- <li><a class="dropdown-item" href="#"><i class="ti-settings"></i> Account Setting</a></li> -->
         <li><a id="logout" class="dropdown-item" href="#"><i class="fa fa-power-off"></i> Logout</a></li>
       </ul>
     </li>
