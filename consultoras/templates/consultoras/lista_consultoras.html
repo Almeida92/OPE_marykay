@@ -1,4 +1,12 @@
-{% extends "principal/base.html" %} {% block block_content %}
+{% extends "principal/base.html" %}
+{% block block_content %}
+
+{% if nova_consultora %}
+    <div class="alert alert-success alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        Usuário cadastrado com sucesso.
+    </div>
+{% endif %}
 
 <div class="row">
     <div class="col-md-12">
@@ -20,12 +28,12 @@
                         </thead>
                         <tbody>
                             {% for consultora in lista_consultoras %}
-                                <tr>
-                                    <td>{{ consultora.id }} </td>
-                                    <td>{{ consultora.usuario.first_name }}</td>
-                                    <td>{{ consultora.usuario.email }}</td>
-                                    <td>{{ consultora.status }} </td>
-                                </tr>
+                            <tr>
+                                <td>{{ consultora.id }} </td>
+                                <td>{{ consultora.usuario.first_name }}</td>
+                                <td>{{ consultora.usuario.email }}</td>
+                                <td>{{ consultora.status }} </td>
+                            </tr>
                             {% endfor %}
                         </tbody>
                     </table>
@@ -34,7 +42,5 @@
         </div>
     </div>
 </div>
-
-
 
 {% endblock %}

@@ -11,18 +11,37 @@
         <form action="{% url 'cadastrar_consultora' %}" method="POST">
           {% csrf_token %}
           <div class="row">
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
               {{ form.primeiro_nome.errors }}
               <label for="{{ form.primeiro_nome.id_for_label }}">{{ form.primeiro_nome.label }}</label>
               {{ form.primeiro_nome }}
             </div>
 
-            <div class="form-group col-md-6">
+            <div class="form-group col-md-4">
               {{ form.ultimo_nome.errors }}
               <label for="{{ form.ultimo_nome.id_for_label }}">{{ form.ultimo_nome.label }}</label>
               {{ form.ultimo_nome }}
             </div>
+            
+            <div class="form-group col-md-4">
+                {{ form.sexo.errors }}
+              <label for="{{ form.sexo.id_for_label }}">{{ form.sexo.label }}</label>
+              {{ form.sexo }}
+            </div>
+          </div>
 
+          <div class="row">
+            <div class="form-group col-md-6">
+                {{ form.usuario.errors }}
+              <label for="{{ form.usuario.id_for_label }}">{{ form.usuario.label }}</label>
+              {{ form.usuario }}
+            </div>
+
+            <div class="form-group col-md-6">
+              {{ form.senha.errors }}
+              <label for="{{ form.senha.id_for_label }}">{{ form.senha.label }}</label>
+              {{ form.senha }}
+            </div>
           </div>
 
           <div class="row">
@@ -32,8 +51,9 @@
             </div>
 
             <div class="form-group col-md-6">
-              <label for="{{ form.sexo.id_for_label }}">{{ form.sexo.label }}</label>
-              {{ form.sexo }}
+              {{ form.email.errors }}
+              <label for="{{ form.email.id_for_label }}">{{ form.email.label }}</label>
+              {{ form.email }}
             </div>
           </div>
 

@@ -49,4 +49,16 @@ class ConsultoraForm(forms.Form):
         label='Desconto',
         max_length=100,
         widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    email = forms.CharField(
+        label='E-mail',
+        max_length=100,
+        widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    usuario = forms.CharField(
+        label='Usuário',
+        max_length=100,
+        widget=forms.TextInput(attrs={'class' : 'form-control'}))
+    senha = forms.CharField(
+        label='Senha',
+        max_length=100,
+        widget=forms.TextInput(attrs={'class' : 'form-control', 'type': 'password'}))
     
