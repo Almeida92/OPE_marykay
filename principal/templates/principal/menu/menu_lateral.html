@@ -1,13 +1,13 @@
 <div class="navbar-side">
-  <ul class="navbar-nav navbar-sidenav bg-light-dark" id="exampleAccordion">
+  <ul class="navbar-nav navbar-sidenav bg-light-dark" id="menu">
 
     <!-- Start Consultoras-->
-    <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Dashboard">
-      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Dashboard" data-parent="#exampleAccordion">
+    <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Consultoras">
+      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Consultoras" data-parent="#menu">
         <i class="ti i-cl-1 ti-user"></i>
         <span class="nav-link-text">Consultoras</span>
       </a>
-      <ul class="sidenav-second-level collapse" id="Dashboard">
+      <ul class="sidenav-second-level collapse" id="Consultoras">
         <li>
           <a href="{% url 'cadastrar_consultora' %}">Cadastrar</a>
         </li>
@@ -17,6 +17,23 @@
       </ul>
     </li>
     <!-- End Consultoras -->
+
+    <!-- Start Produtos-->
+    <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Produtos">
+      <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Produtos" data-parent="#menu">
+        <i class="ti i-cl-1 ti-user"></i>
+        <span class="nav-link-text">Produtos</span>
+      </a>
+      <ul class="sidenav-second-level collapse" id="Produtos">
+        <li>
+          <a href="{% url 'lista_produtos' %}">lista</a>
+        </li>
+        <!-- <li>
+          <a href="{% url 'lista_consultora' %}">Consultar</a>
+        </li> -->
+      </ul>
+    </li>
+    <!-- End Produtos -->
 
   </ul>
 </div>
