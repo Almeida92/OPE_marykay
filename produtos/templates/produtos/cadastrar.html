@@ -1,0 +1,40 @@
+{% extends "principal/base.html" %} {% block block_content %}
+
+<div class="row">
+  <!-- col-md-12 -->
+  <div class="col-md-12 col-lg-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4>Cadastrar Produto</h4>
+      </div>
+      <div class="card-body">
+        <form action="{% url 'cadastrar_produto' %}" method="POST">
+          {% csrf_token %}
+          <div class="row">
+            <div class="form-group col-md-4">
+              {{ form.primeiro_nome.errors }}
+              <label for="{{ form.primeiro_nome.id_for_label }}">{{ form.primeiro_nome.label }}</label>
+              {{ form.primeiro_nome }}
+            </div>
+
+            <div class="form-group col-md-4">
+              {{ form.ultimo_nome.errors }}
+              <label for="{{ form.ultimo_nome.id_for_label }}">{{ form.ultimo_nome.label }}</label>
+              {{ form.ultimo_nome }}
+            </div>
+            
+            <div class="form-group col-md-4">
+                {{ form.sexo.errors }}
+              <label for="{{ form.sexo.id_for_label }}">{{ form.sexo.label }}</label>
+              {{ form.sexo }}
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /.col-md-12 -->
+</div>
+{% endblock %}
