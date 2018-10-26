@@ -18,4 +18,5 @@ urlpatterns = [
     path('logout/', principal.views.logout_view, name="logout_view"),
     url(r'^consultora/', include('consultoras.urls')),
     url(r'^produto/', include('produtos.urls')),
+    url(r'^estoque/', include('estoque.urls')),
 ]
