@@ -1,11 +1,13 @@
-{% extends "principal/base.html" %} {% block block_content %}
+{% extends "principal/base.html" %}
+{% block card_title %} Consultora {% endblock %}
+{% block block_content %}
 
 <div class="row">
   <!-- col-md-12 -->
   <div class="col-md-12 col-lg-12 col-sm-12">
     <div class="card">
       <div class="card-header">
-        <h4>Cadastrar Consultora</h4>
+        <h4>Cadastrar</h4>
       </div>
       <div class="card-body">
         <form action="{% url 'cadastrar_consultora' %}" method="POST">
