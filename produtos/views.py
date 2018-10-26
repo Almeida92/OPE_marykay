@@ -5,7 +5,10 @@ from django.shortcuts import redirect
 from .models import Produto, Categoria
 
 def listar_produtos(request):
-    return render(request, 'produtos/listar.html')
+    lista_produtos = Produto.objects.all()
+    return render(request, 'produtos/listar.html', {
+        'lista_produtos': lista_produtos
+    })
 
 def cadastrar(request):
     if request.method == 'POST':
