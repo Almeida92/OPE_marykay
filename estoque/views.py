@@ -8,7 +8,11 @@ from consultoras.models import Consultora
 from .models import Estoque
 
 def lista_estoque(request):
-  return render(request, 'estoque/lista.html')
+  consultora = Consultora.objects.get(usuario = request.user.id)
+  estoque_atual = Estoque.objects.filter(consultora = consultora.id)
+  return render(request, 'estoque/lista.html', {
+    'estoque': estoque_atual
+  })
 
 # Create your views here.
 def adicionar_estoque(request, cod_produto, usuario, quantidade):
