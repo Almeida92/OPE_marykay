@@ -35,5 +35,19 @@
     </li>
     <!-- End Produtos -->
 
+    <!-- Start Produtos-->
+    <li class="nav-item active" data-toggle="tooltip" data-placement="right" title="Produtos">
+        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" href="#Produtos" data-parent="#menu">
+          <i class="ti ti-shopping-cart"></i>
+          <span class="nav-link-text">Pedido </span>
+        </a>
+        <ul class="sidenav-second-level collapse" id="Produtos">
+          <li>
+            <a href="{% url 'cadastrar_produto' %}">Importar</a>
+          </li>
+        </ul>
+      </li>
+      <!-- End Produtos -->
+
   </ul>
 </div>
