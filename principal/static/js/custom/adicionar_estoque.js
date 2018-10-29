@@ -1,7 +1,7 @@
 function adicionar_estoque(produto, usuario, quantidade) {
   quantidade = $(`#quantidade-produto-${produto}`).val();
   swal({
-      title: "Deseja realmente sair do sistema ?",
+      title: "Deseja incluir produto ao estoque ?",
       text: "",
       type: "warning",
       showCancelButton: true,
