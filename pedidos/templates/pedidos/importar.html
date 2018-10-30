@@ -1,0 +1,29 @@
+{% extends "principal/base.html" %}
+{% block card_title %}
+Pedidos {% endblock %}
+{% block block_content %}
+
+<div class="row">
+  <!-- col-md-12 -->
+  <div class="col-md-12 col-lg-12 col-sm-12">
+    <div class="card">
+      <div class="card-header">
+        <h4>Importar <i class="fa fa-fw fa-upload"></i></h4>
+      </div>
+      <div class="card-body">
+        <form action="/upload-target" class="dropzone dz-clickable primary-dropzone">
+          <div class="dz-default dz-message">
+            <span>Clique ou arraste o arquivo</span>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- /.col-md-12 -->
+</div>
+
+{% endblock %}
+
+{% block scripts_block %}
+<script src="/static/js/custom/pedido/importar.js"></script>
+{% endblock %}

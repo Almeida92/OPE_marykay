@@ -19,4 +19,5 @@ urlpatterns = [
     url(r'^consultora/', include('consultoras.urls')),
     url(r'^produto/', include('produtos.urls')),
     url(r'^estoque/', include('estoque.urls')),
+    url(r'^pedidos/', include('pedidos.urls')),
 ]

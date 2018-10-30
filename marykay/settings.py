@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     'consultoras',
     'principal',
     'produtos',
-    'estoque'
+    'estoque',
+    'pedidos'
 ]
 
 MIDDLEWARE = [

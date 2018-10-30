@@ -1,123 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<title>Sistema Gerenciador de consultoras</title>
 
-		<!-- Bootstrap core CSS -->
-		<link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Sistema Gerenciador de consultoras</title>
 
-		<!-- Custom fonts for this template -->
-		<link href="/static/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<!-- Bootstrap core CSS -->
+	<link href="/static/assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-		<!-- Custom fonts for this template -->
-		<link href="/static/assets/plugins/themify/css/themify.css" rel="stylesheet" type="text/css">
+	<!-- Custom fonts for this template -->
+	<link href="/static/assets/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-		<!-- Angular Tooltip Css -->
-		<link href="/static/assets/plugins/angular-tooltip/angular-tooltips.css" rel="stylesheet">
-		
-		<!-- Morris Charts CSS -->
-		<link href="/static/assets/plugins/morris.js/morris.css" rel="stylesheet">
+	<!-- Custom fonts for this template -->
+	<link href="/static/assets/plugins/themify/css/themify.css" rel="stylesheet" type="text/css">
 
-		<!-- Page level plugin CSS -->
-		<link href="/static/css/animate.css" rel="stylesheet">
+	<!-- Angular Tooltip Css -->
+	<link href="/static/assets/plugins/angular-tooltip/angular-tooltips.css" rel="stylesheet">
 
-		<!-- Sweet Alert CSS -->
-		<link rel="stylesheet" href="/static/assets/plugins/sweetalert/css/sweetalert.css">
+	<!-- Morris Charts CSS -->
+	<link href="/static/assets/plugins/morris.js/morris.css" rel="stylesheet">
 
-		<!-- Custom styles for this template -->
-		<link href="/static/css/glovia.css" rel="stylesheet">
-		<link href="/static/css/glovia-responsive.css" rel="stylesheet">
+	<!-- Page level plugin CSS -->
+	<link href="/static/css/animate.css" rel="stylesheet">
 
-		<!-- Custom styles for Color -->
-		<link href="/static/css/skins/default.css" rel="stylesheet">
-	</head>
+	<!-- Sweet Alert CSS -->
+	<link rel="stylesheet" href="/static/assets/plugins/sweetalert/css/sweetalert.css">
 
-	<body class="fixed-nav sticky-footer" id="page-top">
-	
-		<!-- ===============================
+	<!-- Dropzone CSS -->
+	<link rel="stylesheet" href="/static/assets/plugins/dropzone/dropzone.css">
+
+	<!-- Custom styles for this template -->
+	<link href="/static/css/glovia.css" rel="stylesheet">
+	<link href="/static/css/glovia-responsive.css" rel="stylesheet">
+
+	<!-- Custom styles for Color -->
+	<link href="/static/css/skins/default.css" rel="stylesheet">
+</head>
+
+<body class="fixed-nav sticky-footer" id="page-top">
+
+	<!-- ===============================
 			Navigation Start
 		====================================-->
-		{% include 'principal/menu/nav.html' %}
-		<!-- =====================================================
+	{% include 'principal/menu/nav.html' %}
+	<!-- =====================================================
 		                    End Navigations
 		======================================================= -->
-	  
-		<div class="content-wrapper">
-			<div class="container-fluid">
-			
-				<!-- Title & Breadcrumbs-->
-				<div class="row page-titles">
-					<div class="col-md-12 align-self-center">
-						<h4 class="theme-cl">
-							{% block card_title %}{% endblock %}
-						</h4>
-					</div>
+
+	<div class="content-wrapper">
+		<div class="container-fluid">
+
+			<!-- Title & Breadcrumbs-->
+			<div class="row page-titles">
+				<div class="col-md-12 align-self-center">
+					<h4 class="theme-cl">
+						{% block card_title %}{% endblock %}
+					</h4>
 				</div>
-				<!-- Title & Breadcrumbs-->
-				
-				<!-- row -->
-				{% block block_cards %}{% endblock %}
-				<!-- /row -->
+			</div>
+			<!-- Title & Breadcrumbs-->
 
-				{% block block_content %}{% endblock %}
+			<!-- row -->
+			{% block block_cards %}{% endblock %}
+			<!-- /row -->
 
-			</div>  
-			<!-- /.content-wrapper -->
-			
-			<!-- Footer -->
-			<footer class="sticky-footer">
-			  <div class="container">
+			{% block block_content %}{% endblock %}
+
+		</div>
+		<!-- /.content-wrapper -->
+
+		<!-- Footer -->
+		<footer class="sticky-footer">
+			<div class="container">
 				<div class="text-center">
-				  <small class="font-15">Copyright © Mary kay</small>
+					<small class="font-15">Copyright © Mary kay</small>
 				</div>
-			  </div>
-			</footer>
-			
-			<!-- Scroll to Top Button-->  
-			<a class="scroll-to-top rounded cl-white gredient-bg" href="#page-top">
-			  <i class="ti-angle-double-up"></i>
-			</a>
+			</div>
+		</footer>
 
-			<!-- Bootstrap core JavaScript-->
-			<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
-			<script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-			
-			<!-- Core plugin JavaScript-->
-			<script src="/static/assets/plugins/jquery-easing/jquery.easing.min.js"></script>
-			
-			 <!-- Slick Slider Js -->
-			<script src="/static/assets/plugins/slick-slider/slick.js"></script>
-			
-			<!-- Slim Scroll -->
-			<script src="/static/assets/plugins/slim-scroll/jquery.slimscroll.min.js"></script>
-			
-			<!-- Angular Tooltip -->
-			<script src="/static/assets/plugins/angular-tooltip/angular.js"></script>
-			<script src="/static/assets/plugins/angular-tooltip/angular-tooltips.js"></script>
-			<script src="/static/assets/plugins/angular-tooltip/index.js"></script>
-			
-			<!-- Morris.js charts -->
-		    <script src="/static/assets/plugins/raphael/raphael.min.js"></script>
-		    <script src="/static/assets/plugins/morris.js/morris.min.js"></script>
-			
-			<!-- Custom Chart JavaScript -->
-		    <script src="/static/js/custom/dashboard/dashboard.js"></script>
-			
-			<!-- Custom scripts for all pages -->
-			<script src="/static/js/glovia.js"></script>
+		<!-- Scroll to Top Button-->
+		<a class="scroll-to-top rounded cl-white gredient-bg" href="#page-top">
+			<i class="ti-angle-double-up"></i>
+		</a>
 
-			<!-- Sweet Alert JavaScript -->
-			<script src="/static/assets/plugins/sweetalert/js/sweetalert.js"></script>
-			<script src="/static/js/custom/logout.js"></script>
-			{% block scripts_block %}
-			{% endblock %}
-	  </div>
-	  <!-- Wrapper -->
-	  
-	</body>
+		<!-- Bootstrap core JavaScript-->
+		<script src="/static/assets/plugins/jquery/jquery.min.js"></script>
+		<script src="/static/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Core plugin JavaScript-->
+		<script src="/static/assets/plugins/jquery-easing/jquery.easing.min.js"></script>
+
+		<!-- Slick Slider Js -->
+		<script src="/static/assets/plugins/slick-slider/slick.js"></script>
+
+		<!-- Slim Scroll -->
+		<script src="/static/assets/plugins/slim-scroll/jquery.slimscroll.min.js"></script>
+
+		<!-- Angular Tooltip -->
+		<script src="/static/assets/plugins/angular-tooltip/angular.js"></script>
+		<script src="/static/assets/plugins/angular-tooltip/angular-tooltips.js"></script>
+		<script src="/static/assets/plugins/angular-tooltip/index.js"></script>
+
+		<!-- Morris.js charts -->
+		<script src="/static/assets/plugins/raphael/raphael.min.js"></script>
+		<script src="/static/assets/plugins/morris.js/morris.min.js"></script>
+
+		<!-- Custom Chart JavaScript -->
+		<script src="/static/js/custom/dashboard/dashboard.js"></script>
+
+		<!-- Dropzone Js -->
+		<script src="/static/assets/plugins/dropzone/dropzone.js"></script>
+
+		<!-- Custom scripts for all pages -->
+		<script src="/static/js/glovia.js"></script>
+
+		<!-- Sweet Alert JavaScript -->
+		<script src="/static/assets/plugins/sweetalert/js/sweetalert.js"></script>
+		<script src="/static/js/custom/logout.js"></script>
+		{% block scripts_block %}
+		{% endblock %}
+	</div>
+	<!-- Wrapper -->
+
+</body>
+
 </html>
