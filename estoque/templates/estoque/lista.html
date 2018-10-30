@@ -11,8 +11,6 @@ Estoque {% endblock %}
           <tr>
             <th>Nome</th>
             <th>Código</th>
-            <th>Status</th>
-            <th>Preço</th>
             <th>Qtd</th>
           </tr>
         </thead>
@@ -22,10 +20,6 @@ Estoque {% endblock %}
           <tr>
             <td><a href="#">{{ produto.produto.nome}}</a></td>
             <td>#{{ produto.produto.codigo}}</td>
-            <td>
-              <div class="label cl-success bg-success-light">Paid</div>
-            </td>
-            <td>$ {{ produto.produto.preco}}</td>
             <td>{{ produto.quantidade}}</td>
           </tr>
           {% endfor %}
