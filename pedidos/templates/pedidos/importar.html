@@ -11,10 +11,11 @@ Pedidos {% endblock %}
         <h4>Importar <i class="fa fa-fw fa-upload"></i></h4>
       </div>
       <div class="card-body">
-        <form action="/upload-target" class="dropzone dz-clickable primary-dropzone">
+        <form action="/pedidos/importar/" class="dropzone dz-clickable primary-dropzone">
           <div class="dz-default dz-message">
             <span>Clique ou arraste o arquivo</span>
           </div>
+          {% csrf_token %}
         </form>
       </div>
     </div>
