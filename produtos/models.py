@@ -1,7 +1,7 @@
 from django.db import models
 
 class Categoria(models.Model):
-  codigo = models.IntegerField(default= 0 )
+  codigo = models.IntegerField(default= 0)
   descricao = models.CharField(max_length=100, default= '')  
 
 class Produto(models.Model):
