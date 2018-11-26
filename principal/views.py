@@ -11,7 +11,6 @@ from consultoras.models import Consultora
 def index(request):
   qtd_estoque = consultar_estoque(request.user)
 
-  # return HttpResponse('Hello from Python!')
   return render(request, 'principal/index.html', {
     'estoque': qtd_estoque
   })

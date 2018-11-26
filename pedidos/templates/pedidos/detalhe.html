@@ -4,35 +4,36 @@ Pedidos {% endblock %}
 
 {% block block_content %}
 <div class="row">
-    <div class="col-md-12">
-      <div class="card">
+  <div class="col-md-12">
+    <div class="card">
+      <div class="card-header">
+        <h4>Detalhe - Pedido # {{pedido.id}}</h4>
+      </div>
+      <div class="card-body">
         <table class="table table-lg table-hover">
           <thead>
             <tr>
-              <th> ID Pedido</th>
+              <th> ID Produto</th>
               <th>Data de importação</th>
-              <th></th>
+              <th>Quantidade</th>
             </tr>
           </thead>
-  
+
           <tbody>
-            {% for pedido in lista_pedidos %}
+            {% for pedido in pedido_produto %}
             <tr>
-              <td><a href="#">{{ pedido.id }}</a></td>
-              <td>{{ pedido.pedido.data_pedido }}</td>
-              <td>
-                <a href="{% url 'pedido_detalhe' pedido=pedido.pedido.id %}">
-                  <i class="fa  fa-search-plus"></i>
-                </a>
-              </td>
+              <td><a href="#">{{ pedido.produto.id }}</a></td>
+              <td>{{ pedido.produto.nome }}</td>
+              <td>{{ pedido.quantidade }}</td>
             </tr>
             {% endfor %}
           </tbody>
         </table>
       </div>
     </div>
-  
   </div>
+
+</div>
 {% endblock %}
 
 {% block scripts_block %}

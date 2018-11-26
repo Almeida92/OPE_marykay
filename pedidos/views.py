@@ -91,7 +91,15 @@ def salvar_pedidos(produtos, consultora):
         pedido = novo_pedido)
 
       novo_pedido_produto.save()
-      return redirect(consultar_pedidos)
 
 def remover_excel(filename):
   os.remove(filename)
+
+def pedido_detalhe(request , pedido):
+  pedido = Pedido.objects.get(id=pedido)
+  pedido_produto = PedidoProduto.objects.filter(pedido_id=pedido)
+  
+  return render(request, 'pedidos/detalhe.html', {
+    'pedido': pedido,
+    'pedido_produto': pedido_produto
+  })
