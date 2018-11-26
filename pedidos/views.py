@@ -7,19 +7,27 @@ from pedidos.models import Pedido, PedidoProduto
 from consultoras.models import Consultora
 from produtos.models import Produto
 from django.db import models, IntegrityError
+from django.shortcuts import redirect
+import datetime
+
+def consultar_pedidos(request):
+
+  lista_pedidos = PedidoProduto.objects.all()
+
+  return render(request, 'pedidos/consultar.html', {'lista_pedidos' : lista_pedidos})
 
 def importar_pedidos(request):
-    if request.method == 'POST':
-        myfile = request.FILES['file']
-        try:
-          consultora = Consultora.objects.get(usuario = request.user.id)
-          salvar_arquivo(myfile, consultora)
-        except:
-          print("Erro")
-    else:
-      pass
-      
-    return render(request, 'pedidos/importar.html')
+  if request.method == 'POST':
+      myfile = request.FILES['file']
+      try:
+        consultora = Consultora.objects.get(usuario = request.user.id)
+        salvar_arquivo(myfile, consultora)
+      except:
+        print("Erro")
+  else:
+    pass
+    
+  return render(request, 'pedidos/importar.html')
 
 def salvar_arquivo(arquivo, consultora):
   folder='tmp/'
@@ -62,6 +70,7 @@ def ler_colunas(linhas, consultora):
 def salvar_pedidos(produtos, consultora):
   novo_pedido = Pedido(
     consultora = consultora,
+    data_pedido = datetime.date.today()
   )
 
   try:
@@ -81,12 +90,8 @@ def salvar_pedidos(produtos, consultora):
         produto = produto_cadastrado,
         pedido = novo_pedido)
 
-      try:
-          novo_pedido_produto.save()
-      except IntegrityError:
-          print("Erro ao salvar pedido produto") 
-      
+      novo_pedido_produto.save()
+      return redirect(consultar_pedidos)
 
-    
 def remover_excel(filename):
   os.remove(filename)

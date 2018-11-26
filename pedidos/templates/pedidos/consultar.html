@@ -1,0 +1,34 @@
+{% extends "principal/base.html" %}
+{% block card_title %}
+Pedidos {% endblock %}
+
+{% block block_content %}
+<div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <table class="table table-lg table-hover">
+          <thead>
+            <tr>
+              <th> ID Pedido</th>
+              <th>Data de importação</th>
+            </tr>
+          </thead>
+  
+          <tbody>
+            {% for pedido in lista_pedidos %}
+            <tr>
+              <td><a href="#">{{ pedido.id }}</a></td>
+              <td>{{ pedido.pedido.data_pedido }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  
+  </div>
+{% endblock %}
+
+{% block scripts_block %}
+
+{% endblock %}
