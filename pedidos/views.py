@@ -13,8 +13,13 @@ import datetime
 def consultar_pedidos(request):
 
   lista_pedidos = PedidoProduto.objects.all()
+  consultora = Consultora.objects.get(usuario_id = request.user.id)
+  lista = []
+  for pedido in lista_pedidos:
+    if (pedido.pedido.consultora.id == consultora.id):
+      lista.append(pedido)
 
-  return render(request, 'pedidos/consultar.html', {'lista_pedidos' : lista_pedidos})
+  return render(request, 'pedidos/consultar.html', {'lista_pedidos' : lista})
 
 def importar_pedidos(request):
   if request.method == 'POST':
